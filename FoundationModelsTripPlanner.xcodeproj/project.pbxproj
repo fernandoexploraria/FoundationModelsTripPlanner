@@ -13,8 +13,8 @@
 /* Begin PBXFileReference section */
 		5EE18ED9DD0EBE12A9EA0B91 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		9AFBAAF37D3D2CD5D83C356B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BA888E372E89A9D600C54764 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SampleCode.xcconfig; sourceTree = "<group>"; };
 		BAEFB5F82E8995F5003D063E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		C2CF23B4E783FC5A6E4F1639 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = ../Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		D82EA0F52D5692FD00493877 /* FoundationModelsTripPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoundationModelsTripPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -50,14 +50,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		331AAE968A03CD8D4B00A770 /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				C2CF23B4E783FC5A6E4F1639 /* SampleCode.xcconfig */,
-			);
-			name = Configuration;
-			sourceTree = "<group>";
-		};
 		535B00A47148F2402431D659 /* LICENSE */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,14 +66,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BA888E382E89A9D600C54764 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				BA888E372E89A9D600C54764 /* SampleCode.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		D82EA0EC2D5692FD00493877 = {
 			isa = PBXGroup;
 			children = (
+				BA888E382E89A9D600C54764 /* Configuration */,
 				9AFBAAF37D3D2CD5D83C356B /* README.md */,
 				D82EA0F72D5692FD00493877 /* FoundationModelsTripPlanner */,
 				B9D942512DB17CDB0021CFA6 /* Frameworks */,
 				D82EA0F62D5692FD00493877 /* Products */,
-				331AAE968A03CD8D4B00A770 /* Configuration */,
 				535B00A47148F2402431D659 /* LICENSE */,
 				BAEFB5F82E8995F5003D063E /* .gitignore */,
 			);
@@ -176,7 +176,7 @@
 /* Begin XCBuildConfiguration section */
 		D82EA0FF2D5692FE00493877 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2CF23B4E783FC5A6E4F1639 /* SampleCode.xcconfig */;
+			baseConfigurationReference = BA888E372E89A9D600C54764 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -241,7 +241,7 @@
 		};
 		D82EA1002D5692FE00493877 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2CF23B4E783FC5A6E4F1639 /* SampleCode.xcconfig */;
+			baseConfigurationReference = BA888E372E89A9D600C54764 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -298,7 +298,7 @@
 		};
 		D82EA1022D5692FE00493877 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2CF23B4E783FC5A6E4F1639 /* SampleCode.xcconfig */;
+			baseConfigurationReference = BA888E372E89A9D600C54764 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -362,7 +362,7 @@
 		};
 		D82EA1032D5692FE00493877 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2CF23B4E783FC5A6E4F1639 /* SampleCode.xcconfig */;
+			baseConfigurationReference = BA888E372E89A9D600C54764 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
