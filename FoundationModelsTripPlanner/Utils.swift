@@ -5,8 +5,6 @@ Abstract:
 Project utilites for logging, UI, and other miscellaneous needs.
 */
 
-// Test sync commit – Fer 2025-09-28
-
 import SwiftUI
 import MapKit
 import os
