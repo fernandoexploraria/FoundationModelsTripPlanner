@@ -6,9 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BAEFB5F92E89961D003D063E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BAEFB5F82E8995F5003D063E /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		5EE18ED9DD0EBE12A9EA0B91 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		9AFBAAF37D3D2CD5D83C356B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BAEFB5F82E8995F5003D063E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C2CF23B4E783FC5A6E4F1639 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = ../Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		D82EA0F52D5692FD00493877 /* FoundationModelsTripPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoundationModelsTripPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +83,7 @@
 				D82EA0F62D5692FD00493877 /* Products */,
 				331AAE968A03CD8D4B00A770 /* Configuration */,
 				535B00A47148F2402431D659 /* LICENSE */,
+				BAEFB5F82E8995F5003D063E /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAEFB5F92E89961D003D063E /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
