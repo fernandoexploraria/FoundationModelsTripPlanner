@@ -2,6 +2,6 @@ import Playgrounds
 import FoundationModels
 
 #Playground {
-   let session = LanguageModelSession()
-   let response = try await session.respond(to: "Create and Itinerary")
+    let session = LanguageModelSession()
+    _ = try await session.respond(to: "Create and Itinerary to Joshua Tree")
 }

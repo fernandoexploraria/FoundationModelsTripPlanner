@@ -34,7 +34,7 @@ final class ItineraryPlanner {
                 and activities in \(landmark.name), especially hotels \
                 and restaurants.
                 
-                The point of interest categories may include:
+                These point of interest categories may include:
                 """
                 FindPointsOfInterestTool.categories
                 
@@ -43,6 +43,8 @@ final class ItineraryPlanner {
                 when considering what activities to generate:
                 """
                 landmark.description
+                "Here's and example:"
+                Itinerary.exampleTripToJapan
             }
         )
         self.pointOfInterestTool = pointOfInterestTool

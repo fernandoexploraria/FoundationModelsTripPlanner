@@ -47,7 +47,7 @@ final class LocationLookup {
             return formatter.string(from: temperature)
         } catch {
             Logging.general.error("Couldn't fetch weather: \(error.localizedDescription)")
-            return "unavailable"
+            return "Unavailable"
         }
     }
 }

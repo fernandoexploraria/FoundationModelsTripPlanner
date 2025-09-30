@@ -38,7 +38,7 @@ struct LandmarksView: View {
                     }
                     .safeAreaPadding(FoundationModelsTripPlannerApp.Padding.standard)
                 }
-                .navigationTitle("Foundation Models Trip Planner")
+                .navigationTitle("Exploraria Trip Planner")
             }
         }
     }
@@ -74,3 +74,4 @@ struct LandmarksView: View {
         return landmarkHeight
     }
 }
+

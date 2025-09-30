@@ -6,6 +6,7 @@ A tool to use alongside the models to find points of interest for a landmark.
 */
 
 import FoundationModels
+import MapKit
 import SwiftUI
 
 @Observable
@@ -46,13 +47,36 @@ final class FindPointsOfInterestTool: Tool {
     }
     
     func call(arguments: Arguments) async throws -> String {
-        // This sample app pulls some static data. Real-world apps can get creative.
-        await recordLookup(arguments: arguments)
-        let results = mapItems(arguments: arguments)
-        return "There are these \(arguments.pointOfInterest) in \(landmark.name): \(results.joined(separator: ", "))"
-    }
+        let items = try await pointsOfInterest(location: landmark.locationCoordinate, arguments: arguments)
+            let results = items.prefix(10).compactMap { $0.name}
+            return "There are these \(arguments.pointOfInterest) in \(landmark.name): \(results.formatted())"
+        }
+        
+        private func pointsOfInterest(location: CLLocationCoordinate2D, arguments: Arguments) async throws -> [MKMapItem] {
+            let request = MKLocalSearch.Request()
+            request.naturalLanguageQuery = arguments.naturalLanguageQuery
+            request.pointOfInterestFilter = .init(including: [arguments.pointOfInterest.toMapKitCategory])
+            request.region = MKCoordinateRegion(
+                center: location, latitudinalMeters: 20_000, longitudinalMeters: 20_000
+            )
+            let search = MKLocalSearch(request: request)
+            let response = try await search.start()
+            return response.mapItems
+        }
     
-    private func mapItems(arguments: Arguments) -> [String] {
-        suggestions(category: arguments.pointOfInterest)
+    
+}
+
+extension FindPointsOfInterestTool.Category {
+    var toMapKitCategory: MKPointOfInterestCategory {
+        switch self {
+        case .restaurant: return .restaurant
+        case .campground: return .campground
+        case .hotel: return .hotel
+        case .cafe: return .cafe
+        case .museum: return .museum
+        case .marina: return .marina
+        case .nationalMonument: return .nationalMonument
+        }
     }
 }
